@@ -1,7 +1,8 @@
 import React from "react";
 import { BarLoader, BeatLoader, ClockLoader, HashLoader, PacmanLoader, PropagateLoader, RingLoader } from "react-spinners";
 interface LoaderColorProps {
-  color: string;
+  color?: string;
+  height?:string
 }
 
 
@@ -30,7 +31,23 @@ export const BeatLoaderComponent: React.FC<LoaderColorProps> = ({ color }) => {
 };
 
 
+const override = {
+  display: 'block',
+  margin: '0 auto',
+  borderColor: 'red',
+};
 
+export const OwnLoader:React.FC<LoaderColorProps> = ({ height }) => {
+  return (
+    <div style={{ height: height }} className='flex items-center justify-center'>
+      <div className='flex items-center justify-center space-x-2 animate-bounce'>
+        <div className='w-4 h-4 bg-blue-400 rounded-full'></div>
+        <div className='w-4 h-4 bg-green-400 rounded-full'></div>
+        <div className='w-4 h-4 bg-black rounded-full'></div>
+      </div>
+    </div>
+  );
+};
 
 
 
