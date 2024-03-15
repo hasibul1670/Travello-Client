@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Homepage from "@/pages/HomePage/Homepage";
 
 export default function Home() {
   return (
@@ -6,7 +6,7 @@ export default function Home() {
     
 
    
-
+<Homepage/>
   
     </main>
   );
